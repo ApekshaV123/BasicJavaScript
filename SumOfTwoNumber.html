@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Sum Of Two Number</title>
+        <script>
+            function checkText(){
+                let numOne=Number(document.getElementById('numOne').value);
+                console.log('numOne: ',numOne ,typeof numOne);
+                let numTwo=Number(document.getElementById('numTwo').value);
+                //let sum=numOne + numTwo;
+                //document.getElementById('sumOfNumber').innerText=`sum:${sum} `;
+                if((numOne===0 || numOne==="" &&  numTwo===0 || numTwo==="") ){
+                    document.getElementById('sumOfNumber').innerText=`please fill the required value `;
+
+
+                
+
+                }
+                
+                else if(isNaN(numOne) && isNaN(numTwo)){
+                    document.getElementById('sumOfNumber').innerText=`Error: invalid fields `;
+
+                }
+                else if(isNaN(numOne) && !isNaN(numTwo)){
+                    document.getElementById('sumOfNumber').innerText=`Error: invalid fist number `;
+
+                }else if(!isNaN(numOne) && isNaN(numTwo)){
+                    document.getElementById('sumOfNumber').innerText=`Error: invalid Second number `;
+
+                }
+                
+                
+                
+                else{
+               let sum=numOne + numTwo;
+                document.getElementById('sumOfNumber').innerText=`sum:${sum} `;
+                }
+                
+
+
+               
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Sum Of Two Number</h1>
+        <label>Enter First number:</label><br/>
+        <input type="text" id="numOne" name="FirstNumber"/><br/>
+        <label>Enter Second number:</label><br/>
+        <input type="text" id="numTwo" name="FirstNumber"/><br/>
+        <button onclick="checkText()">Check</button>
+        <div id="sumOfNumber"></div>
+
+
+
+
+    </body>
+
+</html>

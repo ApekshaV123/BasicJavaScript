@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <script>
+            let num1, num2, opeartor;
+            function onPlusClick(){
+                num1=Number(document.getElementById('num1').value);
+                num2=Number(document.getElementById('num2').value);
+                opeartor="+";
+                
+
+
+            }
+            function onMinsClick(){
+                num1=Number(document.getElementById('num1').value);
+                num2=Number(document.getElementById('num2').value);
+                opeartor="-";
+                
+
+
+            }
+            function onMultiplyClick(){
+                num1=Number(document.getElementById('num1').value);
+                num2=Number(document.getElementById('num2').value);
+                opeartor="*";
+            
+            }
+            function onDivisionClick(){
+                num1=Number(document.getElementById('num1').value);
+                num2=Number(document.getElementById('num2').value);
+                opeartor="/";
+            
+            }
+            function onEqualClick(){
+                let result;
+                switch(opeartor){
+                    case "+":
+                        result=num1+num2;
+                        break;
+                    case "-":
+                        result=num1-num2;
+                        break;
+                    case "*":
+                        result=num1*num2;
+                        break;
+                    case "/":
+                        result=num1/num2;
+                    break;
+                    default:
+                        invalid;
+                }
+                document.getElementById('result').innerText=`result:${result}`;
+            }
+            function onClearClick(){
+                num1="";
+                num2="";
+                document.getElementById('num1').value="";
+                document.getElementById('num2').value="";
+                document.getElementById('result').innerText="";
+
+
+            }
+
+
+            
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Simple Calcilator</h1>
+        <label>Enter First Number:</label><br/>
+        <input type="text" id="num1" name="num1"/><br/>
+        <label>Enter Second Number:</label><br/>
+        <input type="text" id="num2" name="num2"/><br/>
+        <button onclick="onPlusClick()">+</button>
+        <button onclick="onMinsClick()">-</button>
+        <button onclick="onMultiplyClick()">*</button>
+        <button onclick="onDivisionClick()">/</button><br/>
+        <button onclick="onEqualClick()">=</button><br/>
+        <button onclick="onClearClick()">Clear</button>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Volume Of Circle</title>
+        <script>
+            function calculateText(){
+                const radius=document.getElementById('radius').value;
+                const height=document.getElementById('height').value;
+                const pi=3.14;
+                //volume=pi*radius*radius*height;
+                //document.getElementById('volumeOfCircle').innerText=`volume:${volume}`;
+
+                if((radius===0 ||  radius==="") && (height===0 || height==="")){
+                    document.getElementById('volumeOfCircle').innerText=`Error:Please fill the required fields`;
+
+
+                }else if(radius==="" && height!==""){
+                    document.getElementById('volumeOfCircle').innerText=`Error:Enter radius`;
+
+                }else if(radius!==0 && height===""){
+                    document.getElementById('volumeOfCircle').innerText=`Error:Enter height`;
+
+
+                }else if(isNaN(radius) && isNaN(height)){
+                    document.getElementById('volumeOfCircle').innerText=`Error:invalid fields`;
+
+
+                }else if(isNaN(radius) && !isNaN(height)){
+                    document.getElementById('volumeOfCircle').innerText=`Error:invalid radius`;
+
+                }else if(!isNaN(radius) && isNaN(height)){
+                    document.getElementById('volumeOfCircle').innerText=`Error:invalid height`;
+
+
+
+                }
+                
+                
+                
+                
+                
+                else{
+                    volume=pi*radius*radius*height;
+                    document.getElementById('volumeOfCircle').innerText=`volume:${volume}`;
+                }
+
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Volume Of Circle</h1>
+        <label>Radius:</label><br/>
+        <input type="text" id="radius" name="Radius"/><br/>
+        <label>Height:</label><br/>
+        <input type="text" id="height" name="Height"/><br/>
+        <button onclick="calculateText()">Calculate</button>
+        <div id="volumeOfCircle"></div>
+
+    </body>
+</html>

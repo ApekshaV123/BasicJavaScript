@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Even Odd Number</title>
+        <script>
+        function checkEvenOdd(){
+            const number=document.getElementById('number').value;
+            if(number==="" || number===0){
+                document.getElementById('evenOddNumber').innerText=`pealse fill the your required number`;
+
+
+            }
+            
+            else if(number%2===0){
+                document.getElementById('evenOddNumber').innerText=`even number`;
+
+
+
+            }else if(isNaN(number)){
+                document.getElementById('evenOddNumber').innerText=`invalid number`;
+
+
+            
+
+            }
+            else{
+                document.getElementById('evenOddNumber').innerText=`odd number`;
+
+            }
+          
+            
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Even Odd Number</h1>
+        <label>Number:</label><br/>
+        <input type="text" id="number" name="number"/><br/>
+        
+        <button onclick="checkEvenOdd()">Check</button>
+        <div id="evenOddNumber"></div>
+
+    </body>
+</html>

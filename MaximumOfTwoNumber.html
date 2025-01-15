@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Maximum Of Two Number</title>
+        <script>
+            function checkText(){
+            const numberOne=document.getElementById('numberOne').value;
+            const numberTwo=document.getElementById('numberTwo').value;
+            document.getElementById("maximumOfTwoNumber").innerText=`numberOne:${numberOne} and numberTwo:${numberTwo}`;
+            
+            if((numberOne===0 || numberOne==="" )&& (numberTwo===0 ||numberTwo==="")){
+                document.getElementById('maximumOfTwoNumber').innerText=`Error: please fill your required number`;
+
+
+
+            }else if(isNaN(numberOne) && isNaN(numberTwo) ){
+                document.getElementById('maximumOfTwoNumber').innerText=`invalid field`;
+
+
+
+
+            }else if(isNaN(numberOne) && !isNaN(numberTwo) ){
+                document.getElementById('maximumOfTwoNumber').innerText=`invalid First number`;
+            }else if(!isNaN(numberOne) && isNaN(numberTwo) ){
+                document.getElementById('maximumOfTwoNumber').innerText=`invalid Second number`;
+            }  
+            else if(numberOne>numberTwo){
+                document.getElementById('maximumOfTwoNumber').innerText=`first Number is maximum :${numberOne}`;
+
+                
+
+            }else{
+                document.getElementById('maximumOfTwoNumber').innerText=`second  Number is minimum:${numberTwo}`;
+
+
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+        <h1>Maximum Of Two number</h1>
+        <label>Enter First number:</label><br/>
+        <input type="text" id="numberOne" name="numberOne"/><br/>
+        <label>Enter Second number:</label><br/>
+        <input type="text" id="numberTwo" name="numberTwo"/><br/>
+        <button onclick="checkText()">Check</button>
+        <div id="maximumOfTwoNumber"></div>
+
+    </body>
+</html>

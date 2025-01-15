@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Area Of Reactangle</title>
+    <style>
+
+    </style>
+    <script>
+        function calculateText() {
+            const length = document.getElementById('length').value;
+            console.log('length: ', length, typeof length)
+            
+            const breadth = document.getElementById('breadth').value;
+             console.log('breadth: ', breadth, typeof breadth)
+            //area=length* breadth;
+            //document.getElementById('areaOfReactangle').innerText=`area:${area}`;
+            if ((length === 0 || length === "") && (breadth === 0 || breadth === "")) {
+                document.getElementById('areaOfReactangle').innerText = ` Error:please fill the required fields`;
+
+            }
+            else if (length === "" && breadth !== "") {
+                document.getElementById('areaOfReactangle').innerText = `Enter length`;
+
+
+            }
+            else if (length !== "" && breadth === "") {
+
+                document.getElementById('areaOfReactangle').innerText = `Enter breadth`;
+            }
+            else 
+                if (isNaN(length) && isNaN(breadth)) {
+                    document.getElementById('areaOfReactangle').innerText = `Error: invalid fields`;
+
+                } else if (isNaN(length) && !isNaN(breadth)) {
+                    document.getElementById('areaOfReactangle').innerText = `Error: invalid length`;
+
+                } else if (!isNaN(length) && isNaN(breadth)) {
+                    document.getElementById('areaOfReactangle').innerText = `Error: invalid breadth`;
+
+
+                }
+
+
+
+
+
+
+                else {
+                    area = length * breadth;
+                    document.getElementById('areaOfReactangle').innerText = `area:${area}`;
+
+                }
+
+
+            }
+
+    </script>
+</head>
+
+<body>
+    <h1>Area Of Reactangle</h1>
+    <label>Enter Length:</label><br />
+    <input type="text" id="length" name="Length" /><br />
+    <label>Enter Breadth:</label><br />
+    <input type="text" id="breadth" name="Breadth" /><br />
+    <button onclick="calculateText()">Calculate</button>
+    <div id="areaOfReactangle"></div>
+
+</body>
+
+</html>
