@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Accept of maximum number</title>
+</head>
+<script>
+    function onCalculateClick() {
+
+
+        let number = [];
+        number = document.getElementById("number").value;
+        number = number.split(",");
+       let max = number[0];
+        for (let i = 0; i < number.length; i++) {
+            if (Number(number[i]) > Number(max)) {
+                max = number[i];
+                }
+            //document.getElementById('result').innerText="Given number is maximum :" +max;
+
+
+
+        }
+        console.log("the number is maximum:" + max);
+
+
+
+
+
+    }
+
+</script>
+
+<body>
+    <h1>Maximum Number</h1>
+    <label>Enter Number1:</label><br />
+    <input type="text" id="number" name="number" /><br />
+
+    <button onclick="onCalculateClick()">calculate</button>
+    <div id="result"></div>
+
+</body>
+
+</html>

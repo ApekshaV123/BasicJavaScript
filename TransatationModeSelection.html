@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            Transation Mode Selection
+           </title>
+           <script>
+            function TransportCheck(){
+            let distance=document.getElementById('distance').value;
+            let check="";
+            if(distance<3){
+            check="Walk";
+            }else if(distance>=3 && distance<=15){
+                check="Bike";
+
+            }else if(distance>=15){
+                check="car";
+            }
+            document.getElementById('TransationModeDistanceCheck').innerText=check;
+            
+
+
+            }
+
+
+           </script>
+    </head>
+    <body>
+        <h1>Transation Mode Selection</h1>
+        <label>Enter your Distance:</label>
+        <input text="number" placeholder="Enter a distance ..." id="distance"/>
+        <button onclick="TransportCheck()">check</button>
+        <div id="TransationModeDistanceCheck"></div>
+    </body>
+</html>

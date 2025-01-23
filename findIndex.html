@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Find index</title>
+    <script>
+        function onSubmitClick() {
+            let arr = [];
+            let index;
+            let index1;
+            let arrayOfNumber = document.getElementById('arrayOfNumber').value;
+            arr = arrayOfNumber.split(",")
+            console.log(arr);
+            let findOfNumber = document.getElementById('findOfNumber').value;
+
+            for (let i = 0; i <= arr.length; i++) {
+                
+                if (findOfNumber === arr[i]) {
+                    index = i;
+                    console.log(index);
+                    break;
+                }
+               
+                    
+                if(index){
+                   
+                   console.log("number  is valid ");
+                   
+                   
+               }else{
+            
+                
+                   console.log("number is not valid");
+               }
+                
+               
+
+                
+             
+               
+                
+               
+           }     
+            }
+        
+       
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Find Index</h1>
+    <label>Array Of Number: </label><br />
+    <input type="text" id="arrayOfNumber" name="arrayOfNumber" /><br />
+    <label>Find Of Number: </label><br />
+    <input type="text" id="findOfNumber" name="findOfNumber" /><br />
+    <button onclick="onSubmitClick()">submit</button>
+    <div id="result"></div>
+
+</body>
+
+</html>

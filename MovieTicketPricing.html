@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+    <title>Movie Ticket Pricing</title>
+    <script>
+        function movieTicketPricing() {
+            let age = document.getElementById('age').value;
+            let price=[0];
+            let todaysDate = new Date();
+            let todaysDay = todaysDate.getDay();
+            
+            let weekday = ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday"];
+            if (age < 18) {
+                price=8;
+            } else if (age >= 18 ) {
+                price =12; 
+
+            }
+           if(todaysDay=3){
+                 price -=2;
+                 
+
+             }
+             document.getElementById('movieTicketPricedBasedAge').innerText= `$ ${price}`;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Movie Ticket Pricing</h1>
+    <label>Movie Ticket Pricing:</label><br />
+    <input type="number" placeholder="Enter a age ..." id="age" />
+    <button onclick="movieTicketPricing()">Submit and Calculate age</button>
+    <div id="movieTicketPricedBasedAge"></div>
+
+
+</body>
+
+</html>

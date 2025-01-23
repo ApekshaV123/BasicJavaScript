@@ -1,0 +1,46 @@
+
+<html >
+<head>
+    
+    <title>Fruit Ripeness Checker</title>
+    <script>
+        function onFruitChecker(){
+        let color=document.getElementById('color').value;  
+        let ripeness="";
+          if(color==="Green"){
+            ripeness="Unripe";
+
+          }
+          else if(color==="Yellow"){
+            ripeness="Ripe";
+
+          }
+          else if(color==="Brown"){
+            ripeness="OverRipe";
+           
+       
+          }
+          document.getElementById("FruitRipenessCheck").innerText=ripeness;
+          
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Fruit Ripeness Checker</h1>
+    <label>Enter color:</label><br/>
+    
+    <select id="color">
+        <option value="">select</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Brown">Brown</option>
+        
+
+    </select>
+    <button onclick="onFruitChecker()">Check</button>
+    <div id="FruitRipenessCheck"></div>
+
+    
+</body>
+</html>

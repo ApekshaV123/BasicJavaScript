@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Accept Second maximum number</title>
+    <script>
+        function onCalculateClick() {
+            let arr = [];
+            let largest = [-1];
+            let secondLargest = [-1];
+            let number = document.getElementById('number').value;
+            arr = number.split(",");
+            console.log(arr);
+
+
+
+
+
+
+           
+            
+
+            for (let i = 0; i < arr.length; i++) {
+                if (Number(arr[i]) > Number(largest)) {
+
+                    largest = arr[i];
+
+                }
+            }
+            //console.log(largest);
+            
+            for (let i = 0; i < arr.length; i++) {
+               if (arr[i]< largest && arr[i] > secondLargest) {
+               secondLargest = arr[i];
+                    
+                }
+
+         }
+         console.log( "the given number is secondlargest:"+secondLargest);
+            
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Accept Second maximum number</h1>
+    <label>Number:</label>
+    <input type="text" id="number" name="number" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <div id="result"></div>
+</body>
+
+</html>

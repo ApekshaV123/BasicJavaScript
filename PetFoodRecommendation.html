@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Pet food Recommendation</title>
+    <script>
+        function petFoodRecommendationClick() {
+            let species = document.getElementById('species').value;
+            let age = document.getElementById('age').value;
+            let recommendation = "";
+
+            if (species === "Dog") {
+                if (age < 2) {
+                    recommendation = "puppy food";
+
+                }
+
+            }
+
+            if (species === "Cat") {
+                if (age > 5) {
+                    recommendation= "Senior cat food";
+
+                } else {
+                    recommendation = "please vaild species";
+
+                }
+
+            }
+
+            document.getElementById("recommendationCheck").innerText = recommendation;
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Pet food Recommendation</h1>
+    <label>species:</label>
+    <select id="species">
+        <option value="">select</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">cat</option>
+    </select>
+    <label>Age:</label>
+    <input type="number" placeholder="Enter a Age ..." id="age" />
+    <button onclick="petFoodRecommendationClick()">Check</button>
+    <div id="recommendationCheck"></div>
+
+</body>
+
+</html>
