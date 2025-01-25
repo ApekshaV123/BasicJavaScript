@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Validate Input</title>
+    <script>
+        function validateInputCheck() {
+            let input = document.getElementById('input').value;
+            for (let i = 0; i <input.length; i++) {
+                
+               // console.log(i)
+                if (input !==null && !isNaN(input) ) {
+                   
+
+                } if(input >=1 && input <=10){
+                    document.getElementById('validateInputChecker').innerText = `${input} is validate input`;
+
+                }else{
+                    document.getElementById('validateInputChecker').innerText = `${input} is not validate input`;
+
+
+                }
+
+                
+            }
+           // document.getElementById('validateInputChecker').innerText = `${input} is validate input`;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Validate Input</h1>
+    <label>Enter number</label><br />
+    <input type="text" placeholder="Enter a Number ..." id="input" />
+    <button onclick="validateInputCheck()">Check</button>
+    <div id="validateInputChecker"></div>
+
+
+</body>
+
+</html>

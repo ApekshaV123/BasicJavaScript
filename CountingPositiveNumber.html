@@ -1,0 +1,28 @@
+<html>
+    <head>
+      <title> Counting Positive Numbers</title>
+      <script> 
+        function countingPositiveNumber(){
+            let arr=[];
+           
+           let num=document.getElementById('num').value;
+          arr=num.split(",")
+          console.log(arr)
+          let count=0;
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]>0){
+                    count ++;   
+                }    
+            }
+            document.getElementById('result').innerText=count;
+        }
+      </script>
+    </head>
+    <body>
+        <h1>Counting Positive Numbers</h1>
+        <label>Enter Number:</label>
+        <input type="text" placeholder="Enter a number ..." id="num"/>
+        <button onclick="countingPositiveNumber()">Check</button>
+        <div id="result"></div>
+    </body>
+</html>

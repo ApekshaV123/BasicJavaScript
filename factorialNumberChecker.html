@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Factorial Number Checker</title>
+    <script>
+        function factorialNumberCkeck() {
+            let number = document.getElementById('number').value;
+            let fact = 1;
+            for (let i = 2; i <=number; i++) {
+                // if (number[i] === 0) {
+                    fact= fact * i;
+                 //   console.log(number)
+                 
+            }
+            //console.log(number)
+            //console.log(fact)
+            document.getElementById('factorialChecker').innerText = `${fact}`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Factorial Number Checker</h1>
+    <label>Enter number:</label>
+    <input type="text" placeholder="Enter a number" id="number" />
+    <button onclick="factorialNumberCkeck()">Check</button>
+    <div id="factorialChecker"></div>
+
+</body>
+
+</html>

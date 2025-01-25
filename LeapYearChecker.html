@@ -5,7 +5,7 @@
             function leapYearCheck(){
               let leapYear=document.getElementById('leapYear').value;
              let result;
-              if(leapYear%4===0 && leapYear%100 !==0 || leapYear%400==0){
+              if((leapYear%4===0 && leapYear%100 !==0 )||( leapYear%400==0)){
                 result= leapYear+ "is a leap year";
               }else{
                 result=leapYear +"is a not leap year";

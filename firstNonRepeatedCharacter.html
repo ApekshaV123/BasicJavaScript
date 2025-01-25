@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>First Non Reapeated String</title>
+    <script>
+        function firstNonRepeatedCharcter() {
+            let inputString = document.getElementById('inputString').value;
+            let charCount = {};
+            for (let i = 0; i < inputString.length; i++) {
+                let char = inputString[i];
+                charCount[char] = (charCount[char] || 0) + 1;
+            }
+            for (let i = 0; i < inputString.length; i++) {
+                let char = inputString[i];
+                if (charCount[char] === 1) {
+                    document.getElementById('firstNonRepeatedCharcterChecker').innerText = `${char}`;
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>First Non Reapeated String</h1>
+    <label>Enter String:</label>
+    <input type="text" placeholder="Enter a string ..." id="inputString" />
+    <button onclick="firstNonRepeatedCharcter()">Check</button>
+    <div id="firstNonRepeatedCharcterChecker"></div>
+</body>
+
+</html>

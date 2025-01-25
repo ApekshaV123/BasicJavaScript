@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Reverse String</title>
+    <script>
+        function reverseString() {
+            let input = document.getElementById('input').value;
+            let reversed = "";
+            for (let i = input.length - 1; i >= 0; i--) {
+                reversed += input[i];
+
+            }
+            document.getElementById('Check').innerText = reversed;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Reverse String</h1>
+    <label>Enter String:</label>
+    <input type="text" placeholder="Enter a String ..." id="input" />
+    <button onclick="reverseString()">Check</button>
+    <div id="Check"></div>
+</body>
+
+</html>
